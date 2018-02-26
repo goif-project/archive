@@ -1,0 +1,132 @@
+extends include/_layout
+block vars
+  include include/_meta
+  - var key = "top"
+  - var page = pages[key]
+block css
+  link(rel="stylesheet", href='./css/index.css')
+block js
+  script(src="./js/index.js")
+block content
+  #wrap
+    #flipbook
+      div.page.page-first
+        h1 H424 -未来創造展作品-
+        h2 「HOME GOLF」
+        p.img
+          img(src="./img/top.png" alt="HOEM-GOLF")
+        .page-top_link
+          img(src="./img/arrow.png" alt="arrow")
+        .page-bottom_link
+          img(src="./img/arrow.png" alt="arrow")
+      div.page.page-second
+        h2 - 目次 -
+        ul
+          li
+            span.red 作品について
+            | ・・・ P2 - 4
+          li
+            span.green メンバー一覧
+            | ・・・ P5 - 6
+          li
+            span.blue 使用した技術
+            | ・・・ P7 - 8
+        .page-num -1-
+      div.page.page-third
+        .red-line
+        h2 - 作品について -
+        p.page-third-title
+          | 朝起きてから、夜寝るまで毎日時間・場所を気にしないでゴルフをやりたい人のためのwebアプリ「
+          strong HOME GORL
+          | 」。
+          br
+          | HOME GOLFはタブレット上で動き、操作もとっても簡単ですのでいつでも、どこでも遊ぶことができます。
+        h3 - 操作方法 -
+        .step01
+          h4 1. STARTボタンでゴルフスタート
+          p.img
+            img(src="./img/top.png")
+        .page-num -2-
+      div.page.page-fourth
+        .red-line
+        .step02
+          h4 2. ステージの選択
+          p.img
+            img(src="./img/page2.png")
+        .step03
+          h4 3. スキルの選択
+          p.img
+            img(src="./img/page3.png")
+        .page-num -3-
+      div.page.page-fifth
+        .red-line
+        .step04
+          h4 4. Let's play
+          p.img
+            img(src="./img/page4.png")
+        .step05
+          h4.more 5. 自分のスコアを確認
+          p.img
+            img(src="./img/page5.png")
+        .page-num -4-
+      div.page.page-sixth
+        .green-line
+        h2 - メンバー一覧 -
+        ul.cfx
+          li
+            img(src="https://placehold.jp/400x400.png" alt="みわみわ")
+          li
+            img(src="https://placehold.jp/400x400.png" alt="みわみわ")
+          li
+            img(src="https://placehold.jp/400x400.png" alt="みわみわ")
+          li
+            img(src="https://placehold.jp/400x400.png" alt="みわみわ")
+        .page-num -5-
+      div.page.page-seventh
+        .green-line
+        ul.cfx
+          li
+            img(src="https://placehold.jp/400x400.png" alt="みわみわ")
+          li
+            img(src="https://placehold.jp/400x400.png" alt="みわみわ")
+          li
+            img(src="https://placehold.jp/400x400.png" alt="みわみわ")
+          li
+            img(src="https://placehold.jp/400x400.png" alt="みわみわ")
+        .page-num -6-
+      div.page.page-eighth
+        .blue-line
+        h2 - 使用した技術 -
+        h3
+          | ◇
+          span.blue コンパイル言語
+        p ◯ pug
+        p ◯ stylus
+        h3
+          | ◇
+          span.blue web-api
+        p ◯ pug
+        p ◯ stylus
+        .page-num -7-
+      div.page.page-ninth
+        .blue-line
+        h3.first
+          | ◇
+          span.blue バックエンド
+        p ◯ pug
+        p ◯ stylus
+        h3
+          | ◇
+          span.blue プラグイン
+        p ◯ pug
+        p ◯ stylus
+        .page-num -8-
+      div.page.page-end
+        h2 THE END
+        .qr-area
+          .text-area
+            h3 WEB開発学科4年 H424
+            p QRコード読み込みでSPサイトへ
+          .image-area
+            img(src="./img/qr.png" alt="QRコード")
+        .page-num COPYRIGHT © 2018 H424 ALL RIGHTS RESERVED.

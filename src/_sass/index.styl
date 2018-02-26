@@ -1,0 +1,169 @@
+@import "include/_style.styl"
+#wrap
+  width 100%
+  min-width 1100px
+  height 100vh
+  background url(../img/table.jpg) no-repeat center
+  background-size 100% 100%
+#flipbook
+  position absolute !important
+  top 0 !important
+  right 0 !important
+  left 0 !important
+  bottom 0 !important
+  width 1000px !important
+  height 600px !important
+  margin auto !important
+  margin-left auto !important
+.red-line
+  top-line red-color
+.green-line
+  top-line green-color
+.blue-line
+  top-line blue-color
+.page
+  background #fff
+  border 1px solid #000
+  box-sizing border-box
+  .page-num
+    position absolute
+    left 0
+    right 0
+    bottom 15px
+    font-size 13px
+    @extend .txC
+  &-first
+    background main_color
+    color #fff
+    img-setup 50%
+    h1
+      font-size 30px
+      margin 120px 0 0
+    h2
+      font-size 25px
+      margin 40px 0 80px
+  &-second
+    h2
+      font-size 35px
+      margin 50px 0
+    ul
+      li
+        margin 100px 0
+        font-size 25px
+        @extend .txC
+        span
+          padding 0 0 5px
+          &.red
+            border-bottom 3px solid red-color
+          &.green
+            border-bottom 3px solid green-color
+          &.blue
+            border-bottom 3px solid blue-color
+  &-third
+    @extend .txC
+    h2
+      sub_h2 red-color
+    &-title
+      padding 10px 25px
+      font-size 16px
+      line-height 1.4
+    h3
+      sub_h3 red-color
+    h4
+      display inline-block
+      font-size 20px
+      margin 0 0 15px
+    .step01
+      img-setup 50%
+  &-fourth,&-fifth
+    @extend .txC
+    h4
+      display inline-block
+      font-size 20px
+      margin 30px 0 15px
+      &:first-child
+        margin 40px 0 15px
+      &.more
+        margin 60px 0 15px
+    .step02,.step03,.step04,.step05
+      img-setup 50%
+  &-sixth,&-seventh
+    @extend .txC
+    h2
+      sub_h2 green-color
+    ul
+      li
+        width 200px
+        height 200px
+        margin-bottom 40px
+        &:nth-child(odd)
+          margin-left 30px
+          margin-right 40px
+        img
+          width 100%
+          border 2px solid #000
+          border-radius 50%
+          box-sizing border-box
+  &-seventh
+    ul
+      margin 60px 0 0
+  &-eighth,&-ninth
+    @extend .txC
+    h2
+      sub_h2 blue-color
+    h3
+      font-size 25px
+      text-align left
+      margin 20px 0
+      padding 10px 25px
+      span
+        margin 0 0 0 15px
+        padding 0 5px 5px
+        &.blue
+          border-bottom 3px solid blue-color
+    p
+      font-size 18px
+      text-align left
+      padding 15px 25px 15px 40px
+  &-ninth
+    h3.first
+      margin-top 70px
+  &-end
+    background main_color
+    color #fff
+    h2
+      font-size 30px
+      @extend .txC
+      line-height 600px
+    .qr-area
+      @extend .cfx:after
+      position absolute
+      top 20px
+      right 20px
+      width 300px
+      color #000
+      background #fff
+      .text-area
+        width 70%
+        @extend .flL
+        h3
+          font-size 18px
+          margin 15px 0
+        p
+          font-size 12px
+          margin 20px 15px
+      .image-area
+        width 30%
+        @extend .flL
+        img
+          width 100%
+  .page-top_link
+    position absolute
+    top 5px
+    right 5px
+  .page-bottom_link
+    position absolute
+    bottom 5px
+    right 5px
+    img
+      transform rotate(90deg)
