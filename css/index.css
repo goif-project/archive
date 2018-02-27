@@ -154,7 +154,8 @@ body {
 .flR {
   float: right;
 }
-.txL {
+.txL,
+.page-third-title {
   text-align: left;
 }
 .txC,
