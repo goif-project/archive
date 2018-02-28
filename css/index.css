@@ -147,15 +147,21 @@ body {
   clear: both;
 }
 .flL,
+.page-sixth ul li .left,
+.page-seventh ul li .left,
 .page-end .qr-area .text-area,
 .page-end .qr-area .image-area {
   float: left;
 }
-.flR {
+.flR,
+.page-sixth ul li .right,
+.page-seventh ul li .right {
   float: right;
 }
 .txL,
-.page-third-title {
+.page-third-title,
+.page-sixth ul li .right .text,
+.page-seventh ul li .right .text {
   text-align: left;
 }
 .txC,
@@ -410,27 +416,43 @@ strong {
 .page-sixth ul li,
 .page-seventh ul li {
   position: relative;
-  width: 200px;
+  width: calc(100% - 30px);
   height: 200px;
   margin-bottom: 40px;
   border-radius: 50%;
-  overflow: hidden;
-}
-.page-sixth ul li:nth-child(odd),
-.page-seventh ul li:nth-child(odd) {
   margin-left: 30px;
   margin-right: 40px;
 }
+.page-sixth ul li:after,
+.page-seventh ul li:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.page-sixth ul li .right,
+.page-seventh ul li .right {
+  width: calc(100% - 200px);
+}
+.page-sixth ul li .right .text,
+.page-seventh ul li .right .text {
+  font-size: 17px;
+  padding: 40px 20px 0 20px;
+  line-height: 2;
+}
+.page-sixth ul li .left,
+.page-seventh ul li .left {
+  width: 200px;
+}
 .page-sixth ul li img,
 .page-seventh ul li img {
-  width: 100%;
+  width: 200px;
   border: 2px solid #000;
   border-radius: 50%;
   box-sizing: border-box;
 }
 .page-sixth ul li .mask,
 .page-seventh ul li .mask {
-  width: 100%;
+  width: 200px;
   height: 100%;
   position: absolute;
   top: 0;
@@ -504,7 +526,7 @@ strong {
   padding: 15px 25px 15px 40px;
 }
 .page-ninth h3.first {
-  margin-top: 70px;
+  margin-top: 30px;
 }
 .page-end {
   background: #009365;

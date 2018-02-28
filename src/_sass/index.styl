@@ -95,21 +95,34 @@
     ul
       li
         position relative
-        width 200px
+        width calc(100% - 30px)
         height 200px
         margin-bottom 40px
         border-radius 50%
-        overflow hidden
-        &:nth-child(odd)
-          margin-left 30px
-          margin-right 40px
+        margin-left 30px
+        margin-right 40px
+        &:after
+          content ""
+          display block
+          clear both
+        .right
+          @extend .flR
+          width calc(100% - 200px)
+          .text
+            @extend .txL
+            font-size 17px
+            padding 40px 20px 0 20px
+            line-height 2
+        .left
+          @extend .flL
+          width 200px
         img
-          width 100%
+          width 200px
           border 2px solid #000
           border-radius 50%
           box-sizing border-box
         .mask
-          width 100%
+          width 200px
           height 100%
           position absolute
           top 0
@@ -160,7 +173,7 @@
       padding 15px 25px 15px 40px
   &-ninth
     h3.first
-      margin-top 70px
+      margin-top 30px
   &-end
     background main_color
     color #fff
